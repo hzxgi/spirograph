@@ -46,7 +46,9 @@ void GearWidget::drawHollowCircle()
         int vertex = radius - HOLLOW_CIRCLE_WIDTH - TRIANGLE_HEIGHT;
         QPolygon polygon;
         painter->translate(0, vertex);
-        polygon << QPoint(0, 0) << QPoint(-ROOT_SIGN_THREE, TRIANGLE_EDGE) << QPoint(ROOT_SIGN_THREE, TRIANGLE_EDGE);
+        polygon << QPoint(0, 0)
+                << QPoint(-ROOT_SIGN_THREE, TRIANGLE_EDGE)
+                << QPoint(ROOT_SIGN_THREE, TRIANGLE_EDGE);
         painter->drawPolygon(polygon);
 
         painter->restore();
